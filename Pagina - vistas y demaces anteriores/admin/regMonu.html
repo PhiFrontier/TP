@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="css/estilos.css" rel="stylesheet" />
+<link type="text/css" href="css/mon.css" rel="stylesheet" />
+<title>Administracion</title>
+</head>
+
+<body>
+<div class="bod1">
+
+<!-- header boniwi-->
+<div class="header">Quien inicia sesion (desconectar)</div>
+
+<!-- barra de titulo-->
+<div class="titulo"><h1 class="h1">Sistema Administración</h1></div>
+
+<!-- navegador de menu -->
+<div class="nav">
+<ul>
+      <li><a href="in.html">Inicio</a></li>
+                <li><a href="regEmp.html">Registro Empresa</a></li>
+                <li><a href="#">Registro Monumento</a></li>
+                <li><a href="#">********+</a></li>
+                <li><a href="#">**********+</a></li>
+                <li><a href="#">**********</a></li>
+                <li><a href="#">**********</a></li>
+                
+</ul>
+</div>
+
+<!-- contenido modificable  -->
+<div class="cont">
+<form action="#" method="post" enctype="multipart/form-data">
+<div class="tit">
+Titulo: <input type="text" name="titulo" id="titulo"  width="200px"/>
+
+</div>
+
+<div class="idiomas">
+Seleccione Idioma:
+<br />
+<br />
+<table>
+<tr>
+<td>Español</td> 
+<td><input type="radio" name="idioma" id="espanol" checked="checked"/></td>
+</tr>
+
+<tr>
+<td>Ingles</td> <td><input type="radio" name="idioma" id="ingles" /></td>
+</tr><tr>
+<td>Chino</td> <td><input type="radio" name="idioma" id="chino" /></td>
+</tr>
+</table>
+</div>
+
+<div class="foto">
+
+<table border="1" height="100px" width="100px;">
+<tr>
+<td>
+   Vista Previa
+</td>
+</tr>
+</table>
+
+<br />
+Archivo: <INPUT type="file" name="archivo" size="30">
+
+</div>
+
+<div class="txtcon">
+Texto:<br />
+ <textarea cols="90" rows="6" name="textos"  draggable="false" >
+</textarea>
+
+</div>
+
+<div class="direccion">
+Direccion:
+<br />
+<table>
+<tr>
+<td>Calle
+</td>
+<td><input type="text" name="calle" />
+</td>
+
+<td width="100px"></td>
+
+<td>Numero
+</td>
+<td><input type="text" name="numero" />
+</td>
+</tr>
+
+<tr>
+<td>Poblacion
+</td>
+<td><input type="text" name="poblacion" />
+</td><td width="100px"></td>
+<td>Piso
+</td>
+<td><input type="text" name="piso" />
+</td>
+</tr>
+
+<tr>
+<td>Block
+</td>
+<td><input type="text" name="block" />
+</td><td width="100px"></td>
+<td>Referencia
+</td>
+<td><input type="text" name="ref" />
+</td>
+</tr>
+
+</table>
+<br />
+<br />
+<input type="submit" value="Guardar" />
+<input type="reset" value="Borrar" />
+
+
+</div>
+
+</form>
+</div>
+</div>
+</body>
+</html>

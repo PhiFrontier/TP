@@ -1,0 +1,71 @@
+/* CSS Document */
+
+.cuerpo{
+	alignment-adjust:middle;
+	text-align:center;
+}
+
+.bod1{
+	padding-left:200px;
+	height:1000px;
+	width:1000px;
+}
+
+.header{
+	height:49px;
+	width:1000px;
+	float:inherit;
+	background:#f9f9f9;
+	border-bottom:1px solid #dddddd;
+	text-align:right;
+	text-shadow:#666;
+}
+
+.nav{
+	width:198px;
+	height:798px;
+	background:#f2f2f2;
+	float:left;
+	border-top:1px solid #dddddd;
+	border-right:1px solid #dddddd;
+	border-left:1px solid #dddddd;
+	border-bottom::1px solid #dddddd;
+}
+
+.cont{
+	width:799px;
+	height:798px;
+	background:#f2f2d9;
+	float:right;
+	border-top:1px solid #dddddd;
+	border-right:1px solid #dddddd;
+	border-bottom::1px solid #dddddd;
+}
+
+.titulo{
+	height:149px;
+	width:998px;
+	border-right:1px solid #dddddd;
+	border-left:1px solid #dddddd;
+	border-bottom::1px solid #dddddd;
+}
+
+.h1{
+	text-align:center;
+	font-style:oblique;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:70px;
+}
+
+.list li{
+	background:#f0f0f0 url(../images/glossy.png) repeat-x;
+	display:block;
+	border:1px solid #dddddd;
+	width:100%;
+	margin:5px 0 0 0;
+}
+
+.p{
+	padding: 10px 10px 10px 10px;
+	text-align:justify;
+}
