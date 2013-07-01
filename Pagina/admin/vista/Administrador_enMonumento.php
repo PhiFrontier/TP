@@ -4,14 +4,14 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Monumento a los caidos de Iquique</title>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-	<script src="../jquery/jquery-latest.js" type="text/javascript"></script></head>
+    <link href="../../css/style.css" type="text/css" rel="stylesheet">
+	<script src="../../jquery/jquery-latest.js" type="text/javascript"></script></head>
 
 <body>
 <div id="wrap">
     <div class="header">
         <div class="logo">
-            <a href="../index.html"><img src="../images/logo.png" alt="Playlist Mobi" /></a>
+            <a href="../index.php"><img src="../images/logo.png" alt="Playlist Mobi" /></a>
         </div>
         <div class="button" id="show">
             <a href="#">Menu</a>
@@ -75,22 +75,22 @@ Antes del traslado de los restos mortales de los héroes desde Iquique se efectu
             <div class="grid">
               <h2>Auspicio</h2>
               <ul>
-                <li><a href="#"><img src="images/ripley.jpg" alt="Img" width="338" height="149">
+                <li><a href="#"><img src="../images/ripley.jpg" alt="Img" width="338" height="149">
                   <input name="submit23" type="submit" class="submit" value="Modificar">
                 </a><a href="#">
                   <input name="text32" type="text" class="text" value="Ripley">
                 </a></li>
-                <li><a href="#"><img src="images/unimarc.jpg" alt="Img" width="202" height="249" border="0">
+                <li><a href="#"><img src="../images/unimarc.jpg" alt="Img" width="202" height="249" border="0">
                   <input name="submit232" type="submit" class="submit" value="Modificar">
                 </a><a href="#">
                   <input name="text322" type="text" class="text">
                 </a></li>
-                <li><a href="#"><img src="images/paris.jpg" alt="Img" width="224" height="225">
+                <li><a href="#"><img src=".//images/paris.jpg" alt="Img" width="224" height="225">
                   <input name="submit233" type="submit" class="submit" value="Modificar">
                 </a><a href="#">
                   <input name="text323" type="text" class="text">
                 </a></li>
-                <li><a href="#"><img src="images/la polar.jpg" alt="Img" width="259" height="194">
+                <li><a href="#"><img src="../images/la polar.jpg" alt="Img" width="259" height="194">
                   <input name="submit234" type="submit" class="submit" value="Modificar">
                 </a><a href="#">
                   <input name="text324" type="text" class="text">
@@ -103,7 +103,7 @@ Antes del traslado de los restos mortales de los héroes desde Iquique se efectu
               <ul>
                 <li>
                   <div class="list-title"><a href="#"><strong>Iglesia de la Matriz </strong></a> - direccion </div>
-                  <div class="list-art"><a href="#"><img src="images/matrizb.jpg" alt="Img" width="400" height="364">
+                  <div class="list-art"><a href="#"><img src="../images/matrizb.jpg" alt="Img" width="400" height="364">
                     <input name="submit2342" type="submit" class="submit" value="Modificar">
                   </a></div>
                   <div class="list-text">
@@ -119,7 +119,7 @@ Antes del traslado de los restos mortales de los héroes desde Iquique se efectu
                 </li>
                 <li>
                   <div class="list-title"><a href="#"><strong>Torre del reloj Barón</strong></a> - direccion </div>
-                  <div class="list-art"><a href="#"><img src="images/torreon.jpg" alt="Img" width="400" height="300">
+                  <div class="list-art"><a href="#"><img src="../images/torreon.jpg" alt="Img" width="400" height="300">
                     <input name="submit23422" type="submit" class="submit" value="Modificar">
                   </a></div>
                   <div class="list-text">

@@ -46,19 +46,12 @@
 
 <br></br>
 
-<table border="1" cellspacing="0" cellpadding="20">
-<tr>
-<td>&nbsp;</td><td>Region</td><td>Provincia</td><td>Comuna</td><td>V/P/C</td><td>Calle</td><td>Numero</td><td>Block</td><td>Sector</td><td>Piso</td>
-</tr>
-<tr>
-<td>*</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-</table>
+
 
 <table>
 <tr>
-<td><fieldset><legend>Correo Electronico</legend><table>
-</tr>
+<td><fieldset><legend>Correo Electronico</legend></fieldset></td></tr><table>
+
 <tr><td colspan="2"></td><td><input type="submit" value="Eliminar"/></td>
 </tr>
 <tr><td colspan="2"></td><td><input type="submit" value="Modificar"/></td>
@@ -70,10 +63,11 @@
 <table border="1" cellspacing="0" cellpadding="10">
 <tr><td>&nbsp;</td><td width="100">Email</td></tr>
 <tr><td>*</td><td width="300"></td></tr>
-</table>
 </td>
 </table></fieldset></td>
-<td><fieldset><legend>Telefono</legend><table>
+</table>
+<table>
+<td><fieldset><legend>Telefono</legend>
 <tr><td colspan="4"></td><td><input type="submit" value="Eliminar"/></td>
 </tr>
 <tr><td colspan="4"></td><td><input type="submit" value="Modificar"/></td>
