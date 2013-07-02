@@ -3,4 +3,7 @@ index.php
 application/config.php
 application/cache
 application/config/database.php
-
+Pagina/_mmServerScripts
+Pagina/_notes
+Pagina/Connections
+Pagina/admin/_notes
