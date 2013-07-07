@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Region" value="name:REGION_ID;datatype:int,name:REGION_NOMBRE;datatype:string" />
+	<infoitem key="UD_provincia" value="name:PROVINCIA_ID;datatype:int,name:PROVINCIA_NOMBRE;datatype:string,name:PROVINCIA_REGION_ID;datatype:int" />
+	<infoitem key="UD_Comuna" value="name:COMUNA_ID;datatype:int,name:COMUNA_NOMBRE;datatype:string,name:COMUNA_PROVINCIA_ID;datatype:int" />
+</info>

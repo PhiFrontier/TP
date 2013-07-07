@@ -19,12 +19,13 @@
         <div class="clear-float"></div>
         <div class="nav">
             <ul>
-                <li><a href="../index.php">Inicio</a></li>
-                <li><a href="#">Adminitrador Monumento </a></li>
-                <li><a href="#">Adminitrador Empresas </a></li>
-                <li><a href="#">Adminitrador Idiomas y tipos de usuarios </a></li>
-                <li><a href="#">Adminitrador textos paginas </a></li>
-                <li><a href="#">Adminitrador usuarios </a><a href="#">Adminitrador región-comuna-provicia</a></li>
+                 <li><a href="in.php">Inicio</a></li>
+                <li><a href="monumentos.php">Adminitrador Monumento </a></li>
+                <li><a href="empresas.php">Adminitrador Empresas</a></li>
+                <li><a href="idiomas.php">Adminitrador Idiomas</a></li>
+                <li><a href="tiposUser.php">Adminitrador Tipos de Usuarios </a></li>
+                <li><a href="usuarios.php">Adminitrador usuarios </a></li>
+                <li><a href="pais.php">Adminitrador región-comuna-provicia</a></li>
                 <li>
                   <ul>
                     <li><a href="../signup.html">&quot;administrador&quot; cerrar </a></li>

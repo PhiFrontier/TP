@@ -41,6 +41,8 @@ else
 echo "Please select image..!";
 exit;
 }
+
+header("location: ../vista/idiomas.php");
 ?>
 
 

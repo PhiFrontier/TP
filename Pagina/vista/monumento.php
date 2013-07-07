@@ -1,3 +1,18 @@
+<?php
+
+
+require_once('../Connections/proyecto.php');
+$idmon=$_GET["mon"];
+
+mysql_select_db($database_proyecto, $proyecto);
+$query_region = "SELECT * FROM region";
+mysql_query("SET NAMES 'utf8'");
+$region = mysql_query($query_region, $proyecto) or die(mysql_error());
+$row_region = mysql_fetch_assoc($region);
+$totalRows_region = mysql_num_rows($region);
+
+
+?>
 <!DOCTYPE HTML>
 <html>
 <head>

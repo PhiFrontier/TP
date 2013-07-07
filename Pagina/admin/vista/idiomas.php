@@ -32,11 +32,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_monumento = "SELECT * FROM monumentos";
+$query_idioma = "SELECT * FROM idiomas";
 mysql_query("SET NAMES 'utf8'");
-$monumento = mysql_query($query_monumento, $proyecto) or die(mysql_error());
-$row_monumento = mysql_fetch_assoc($monumento);
-$totalRows_monumento = mysql_num_rows($monumento);
+$idioma = mysql_query($query_idioma, $proyecto) or die(mysql_error());
+$row_idioma = mysql_fetch_assoc($idioma);
+$totalRows_idioma = mysql_num_rows($idioma);
 
 
 ?>
@@ -45,21 +45,18 @@ $totalRows_monumento = mysql_num_rows($monumento);
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Sistema de Administracion</title>
+    <title>Ingresar</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet">
-    <script src="../../jquery/jquery-latest.js" type="text/javascript">
-    </script>
+	<script src="../../jquery/jquery-latest.js" type="text/javascript"></script>
 </head>
 
 <body>
 <div id="wrap">
     <div class="header">
         <div class="logo">
-            <a href="../index.php"><img src="../images/logo.png" alt="Playlist Mobi" /></a>
-        </div>
+            <a href="../index.php"><img src="../images/logo.png" alt="Playlist Mobi" /></a>        </div>
         <div class="button" id="show">
-            <a href="#">Menu</a>
-        </div>
+            <a href="#">Menu</a>        </div>
         <div class="clear-float"></div>
         <div class="nav">
             <ul>
@@ -70,62 +67,60 @@ $totalRows_monumento = mysql_num_rows($monumento);
                 <li><a href="tiposUser.php">Adminitrador Tipos de Usuarios </a></li>
                 <li><a href="usuarios.php">Adminitrador usuarios </a></li>
                 <li><a href="pais.php">Adminitrador región-comuna-provicia</a></li>
-           </ul>
+                <li>
                   <ul>
-                    <li><a href="../index.php">&quot;administrador&quot; cerrar </a></li>
+                    <li><a href="../signup.html">&quot;administrador&quot; cerrar </a></li>
                   </ul>
                 </li>
-                <li id="hide"><a href="#">&laquo;Ocultar menú &raquo;</a></li>
             </ul>
-            <ul>
-              <li></li>
-            </ul>
+            <div id="hide"> <a href="#">&laquo;Ocultar menú &raquo;</a></div>
             <ul>
               <li></li>
             </ul>
       </div>
+          <h1>Mantenedor Idiomas</h1> 
     </div>
     <div class="content">
-        <div class="post">
-            <h1>Mantenedor de Monumentos</h1>
-            <div class="post-item">
-           	  <form action="#" method="get">
-           	  		
-                 Buscar <input value="" type="text" name="buscar"> <input type="submit" value="buscar">   
-              </form>
-            </div>
-            <div class="post-item">
-            	<table class="grid">
+        
+        <div class="post"><form action="" method="post">
+        <input type="text" name="buscar"><input type="submit" value="Buscar">
+        </form>
+        </div>
+        <div class="post-item">
+        		<table class="grid" border="0">
                 	<tr>
-                    	<th scope="col" class="grid" width="40px">Nro
+                    	<th scope="col" width="40px">Nro
                         </th>
-                        <th scope="col" class="grid" width="200px">Nombre Monumento
+                        <th scope="col" width="100px">Nombre
                         </th>
-                        <th scope="col" class="grid" width="100px">Modificar
+                        <th scope="col" width="80px">Bandera
+                        </th>
+                        <th scope="col">Modificar
                         </th>
                       <td><div class="button" id="show">
-            				<a href="monumento_add.php">Agregar Nuevo</a>
+            				<a href="idioma_add.php">Agregar Nuevo</a>
        						</div>
                         </td>
                     </tr>
-                    
-                    <?php if($totalRows_monumento>0){
+                    <?php if($totalRows_idioma>0){
 							do{
 								?>
+                    
                     <tr>
-                    	<th scope="col" class="grid" width="40px"><? echo $row_monumento['idMonumentos']  ?>
+                    	<th scope="col" width="40px"><? echo $row_idioma['idIdiomas']  ?>
                         </th>
-                        <th scope="col" class="grid" width="200px"><? echo $row_monumento['nombre']  ?>
+                        <th scope="col" width="100px"><? echo $row_idioma['nombre']  ?>
                         </th>
-                        <th scope="col" class="grid" width="100px"><div class="button" id="show">
-            				<a href="monumento_mod.php?id=<? echo $row_monumento['idMonumentos']  ?>">Editar</a>
+                        <th scope="col" width="80px"><img src="../../fotos/<? echo $row_idioma['fotobandera']  ?>" width="10" height="5"> 
+                        </th>
+                        <th scope="col"><div class="button" id="show">
+            				<a href="idioma_mod.php?id=<? echo $row_idioma['idIdiomas']  ?>">Editar</a>
        						</div>
                         </th>
                     </tr>
-                    <? }while($row_monumento = mysql_fetch_assoc($monumento)); }  ?>
+                    <? }while($row_idioma = mysql_fetch_assoc($idioma)); }  ?>
 
                 </table>
-            </div>
         </div>
     </div>
     <div class="footer">
@@ -133,6 +128,7 @@ $totalRows_monumento = mysql_num_rows($monumento);
     </div>
     <div class="by"></div>
 </div>
+
 <script type="text/javascript">
 $('.nav').hide();
 	$('#show').click(function (){

@@ -44,11 +44,13 @@
     </div>
     <div class="content">
         <div class="post">
-            <h2>Error 404</h2>
-            <p>La Pagina que busca no se encuentra disponible</p>
-            <div class="button" id="show">
-            <a href="in.php">Volver a la Pagina Principal</a>
-        </div>
+            <h1>Estamos Trabajando Para Usted</h1>
+            <div class="post-image"><img src="../../fotos/const.jpg"></div>
+            <?php
+			ob_start(); 
+  			header("refresh: 5; url = in.php"); 
+			ob_end_flush();			
+			?>
         </div>
     </div>
     <div class="footer">
