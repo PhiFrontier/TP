@@ -33,18 +33,21 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 
 mysql_select_db($database_proyecto, $proyecto);
 $query_Region = "SELECT * FROM region";
+mysql_query("SET NAMES 'utf8'");
 $Region = mysql_query($query_Region, $proyecto) or die(mysql_error());
 $row_Region = mysql_fetch_assoc($Region);
 $totalRows_Region = mysql_num_rows($Region);
 
 mysql_select_db($database_proyecto, $proyecto);
 $query_provincia = "SELECT * FROM provincia";
+mysql_query("SET NAMES 'utf8'");
 $provincia = mysql_query($query_provincia, $proyecto) or die(mysql_error());
 $row_provincia = mysql_fetch_assoc($provincia);
 $totalRows_provincia = mysql_num_rows($provincia);
 
 mysql_select_db($database_proyecto, $proyecto);
 $query_Comuna = "SELECT * FROM comuna";
+mysql_query("SET NAMES 'utf8'");
 $Comuna = mysql_query($query_Comuna, $proyecto) or die(mysql_error());
 $row_Comuna = mysql_fetch_assoc($Comuna);
 $totalRows_Comuna = mysql_num_rows($Comuna);
@@ -93,6 +96,7 @@ $totalRows_Comuna = mysql_num_rows($Comuna);
           <h1>Agregar Empresa</h1> 
         </blockquote>
     </div>
+    <form action="" enctype="multipart/form-data" method="post">
    	<div class="content">
 				<legend>Datos</legend>
 				<div class="post-item">
@@ -102,8 +106,8 @@ $totalRows_Comuna = mysql_num_rows($Comuna);
                           <td>Foto logo</td>
 						</tr>
 						<tr>
-						  <td> <input type="text" name=""/> - <input type="text" size="2"/> </td>
-                            <td><input type="file" name="logo"/></td>
+						  <td> <input type="text" name=""/> - <input type="text" size="2"/></td>
+                          <td><input type="file" name="logo" size="20"/></td>
 					  </tr>
 					  <tr>
 						<td>Nombre</td>
@@ -190,36 +194,10 @@ do {
 					</tr>
 		</table>
 	  </div>
-
-	  <div class="post-item">
-		<legend>Correo Electronico</legend>
-		<table>
-		  <tr>
-           	<td>Email:</td><td><input type="text" name="email"/></td>
-		  </tr>
-		</table>
-	  </div>
-
-	  <div class="post-item">
-		<legend>Telefono</legend>
-        <table>
-					<tr>
-                		<td>Codigo:</td>
-						<td><input type="text" name="codFono" size="4"/></td>
-    					<td>Numero:</td>
-    					<td><input type="text" name="NumFono" /></td>
-					</tr>
-		</table>
-	  </div>
-      
-      <div class="post-item">
-      <form id="myForm">
-<div id="input1" class="clonedInput" style="margin-bottom: 4px;">Name: <input id="name1" type="text" name="name1" /></div>
-<div><input id="btnAdd" type="button" value="add another name" /><br />
-<input id="btnDel" type="button" value="remove name" disabled="disabled" /></div>
-</form>
-      </div>
+      <input type="submit" value="Guardar">
+      <input type="reset" value="Borrar">
 	</div>
+    </form>
 <script type="text/javascript">
 $('.nav').hide();
 	$('#show').click(function (){
