@@ -93,7 +93,7 @@ $totalRows_comuna = mysql_num_rows($comuna);
               <li></li>
             </ul>
       </div>
-          <h1><? echo $row_direccion[0]["razon_social"]  ?></h1> 
+          <h1><? echo $row_empresa["razon_social"]  ?></h1> 
     </div>
     <div class="content">
         
@@ -117,10 +117,6 @@ $totalRows_comuna = mysql_num_rows($comuna);
                         </th>
                         <th scope="col">Modificar
                         </th>
-                      <td><div class="button" id="show">
-            				<a href="empresa_add.php">Agregar Nuevo</a>
-       						</div>
-                        </td>
                     </tr>
                     <?php 
 							do{
