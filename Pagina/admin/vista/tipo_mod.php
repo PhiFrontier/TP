@@ -34,12 +34,12 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_usuario = "SELECT * FROM usuarios where idUsuarios = $id";
+$query_tipo = "SELECT * FROM tipos where idTipos = $id";
 mysql_query("SET NAMES 'utf8'");
-$usuario = mysql_query($query_usuario, $proyecto) or die(mysql_error());
-$row_usuario = mysql_fetch_assoc($usuario);
-$totalRows_usuario = mysql_num_rows($usuario);
-if($totalRows_usuario==0){ header("location:error_no.html");}
+$tipo = mysql_query($query_tipo, $proyecto) or die(mysql_error());
+$row_tipo = mysql_fetch_assoc($tipo);
+$totalRows_tipo = mysql_num_rows($tipo);
+if($totalRows_tipo==0){ header("location:error_no.html");}
 
 ?>
 <!DOCTYPE HTML>
@@ -87,28 +87,16 @@ if($totalRows_usuario==0){ header("location:error_no.html");}
     <div class="content">
         
         <div class="post">
-          <form action="../controlador/usuario_mod.php" method="post">
+          <form action="../controlador/tipo_mod.php" method="post">
           	<div class="post-item">
             	<table>
                 <tr>
                     	<td>ID:</td> 
-                        <td><input name="id" type="text" readonly value="<? echo $row_usuario['idUsuarios'] ?>"></td>
+                        <td><input name="id" type="text" readonly value="<? echo $row_tipo['idTipos'] ?>"></td>
                   </tr>
             		<tr>
-                    	<td>Nombre Usuario:</td> 
-                        <td><input type="text" name="usuario" value="<? echo $row_usuario['nom_usuario'] ?>"></td>
-                    </tr>
-            		<tr>
-                    	<td>Password:</td>
-                        <td><input type="password" name="pass" value="<? echo $row_usuario['password'] ?>"></td>
-                    </tr>
-                    <tr>
-                    	<td>Ingresar Nueva Password:</td>
-                        <td><input type="password" name="pass1"></td>
-                    </tr>
-            		<tr>
-                    	<td>Vuelva a Ingresar Nueva Password:</td>
-                        <td><input type="password" name="pass2"></td>
+                    	<td>Tipo Usuario:</td> 
+                        <td><input type="text" name="tipo" value="<? echo $row_tipo['nombre'] ?>"></td>
                     </tr>
             	</table>
             </div>

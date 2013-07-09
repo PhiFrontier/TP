@@ -32,11 +32,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_usuario = "SELECT * FROM usuarios";
+$query_tipo = "SELECT * FROM tipos";
 mysql_query("SET NAMES 'utf8'");
-$usuario = mysql_query($query_usuario, $proyecto) or die(mysql_error());
-$row_usuario = mysql_fetch_assoc($usuario);
-$totalRows_usuario = mysql_num_rows($usuario);
+$tipo = mysql_query($query_tipo, $proyecto) or die(mysql_error());
+$row_tipo = mysql_fetch_assoc($tipo);
+$totalRows_tipo = mysql_num_rows($tipo);
 
 
 ?>
@@ -45,7 +45,7 @@ $totalRows_usuario = mysql_num_rows($usuario);
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ingresar</title>
+    <title>Sistema de Administracion</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet">
 	<script src="../../jquery/jquery-latest.js" type="text/javascript"></script>
 </head>
@@ -78,7 +78,7 @@ $totalRows_usuario = mysql_num_rows($usuario);
               <li></li>
             </ul>
       </div>
-          <h1>Mantenedor Usuarios</h1> 
+          <h1>Mantenedor Tipos de Usuarios</h1> 
     </div>
     <div class="content">
         
@@ -87,11 +87,12 @@ $totalRows_usuario = mysql_num_rows($usuario);
         </form>
         </div>
         <div class="post-item">
+        <?php if($totalRows_tipo>0){ ?>
         		<table class="grid" border="0">
                 	<tr>
                     	<th scope="col" width="40px">Nro
                         </th>
-                        <th scope="col" width="100px">Nombre
+                        <th scope="col" width="100px">Tipo de Usuario
                         </th>
                         <th scope="col">Modificar
                         </th>
@@ -100,25 +101,25 @@ $totalRows_usuario = mysql_num_rows($usuario);
        						</div>
                         </td>
                     </tr>
-                    <?php if($totalRows_usuario>0){
+                    <?
 							do{
 								?>
                     
                     <tr>
-                    	<th scope="col" width="40px"><? echo $row_usuario['idUsuarios']  ?>
+                    	<th scope="col" width="40px"><? echo $row_tipo['idTipos']  ?>
                         </th>
-                        <th scope="col" width="100px"><? echo $row_usuario['nom_usuario']  ?>
+                        <th scope="col" width="100px"><? echo $row_tipo['nombre']  ?>
                         </th>
                         <th scope="col"><div class="button" id="show">
-            				<a href="usuario_mod.php?id=<? echo $row_usuario['idUsuarios']  ?>">Editar</a>
+            				<a href="tipo_mod.php?id=<? echo $row_tipo['idTipos']  ?>">Editar</a>
        						</div>
                         </th>
                     </tr>
-                    <? }while($row_usuario = mysql_fetch_assoc($usuario)); }else{  ?>
+                    <? }while($row_tipo = mysql_fetch_assoc($tipo)); }else{  ?>
                     
                     <h2> No Se Han Encontrado Registros </h2>
                     <div class="button" id="show">
-            				<a href="usuario_add.php">Agregar Nuevo</a>
+            				<a href="tipo_add.php">Agregar Nuevo</a>
        						</div>
                     <?    }?>
                 </table>
