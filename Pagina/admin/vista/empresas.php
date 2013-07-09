@@ -32,11 +32,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_idioma = "SELECT * FROM idiomas";
+$query_empresa = "SELECT * FROM empresas";
 mysql_query("SET NAMES 'utf8'");
-$idioma = mysql_query($query_idioma, $proyecto) or die(mysql_error());
-$row_idioma = mysql_fetch_assoc($idioma);
-$totalRows_idioma = mysql_num_rows($idioma);
+$empresa = mysql_query($query_empresa, $proyecto) or die(mysql_error());
+$row_empresa = mysql_fetch_assoc($empresa);
+$totalRows_empresa = mysql_num_rows($empresa);
 
 
 ?>
@@ -69,7 +69,7 @@ $totalRows_idioma = mysql_num_rows($idioma);
                 <li><a href="pais.php">Adminitrador región-comuna-provicia</a></li>
                 <li>
                   <ul>
-                    <li><a href="../signup.html">&quot;administrador&quot; cerrar </a></li>
+                    <li><a href="../index.php">&quot;administrador&quot; cerrar </a></li>
                   </ul>
                 </li>
             </ul>
@@ -86,6 +86,7 @@ $totalRows_idioma = mysql_num_rows($idioma);
         <input type="text" name="buscar"><input type="submit" value="Buscar">
         </form>
         </div>
+        <? if($totalRows_empresa>0){ ?>
         <div class="post-item">
         		<table class="grid" border="0">
                 	<tr>
@@ -93,32 +94,34 @@ $totalRows_idioma = mysql_num_rows($idioma);
                         </th>
                         <th scope="col" width="100px">Nombre
                         </th>
-                        <th scope="col" width="80px">Bandera
-                        </th>
                         <th scope="col">Modificar
                         </th>
                       <td><div class="button" id="show">
-            				<a href="idioma_add.php">Agregar Nuevo</a>
+            				<a href="empresa_add.php">Agregar Nuevo</a>
        						</div>
                         </td>
                     </tr>
-                    <?php if($totalRows_idioma>0){
+                    <?php 
 							do{
 								?>
                     
                     <tr>
-                    	<th scope="col" width="40px"><? echo $row_idioma['idIdiomas']  ?>
+                    	<th scope="col" width="40px"><? echo $row_empresa['idEmpresas']  ?>
                         </th>
-                        <th scope="col" width="100px"><? echo $row_idioma['nombre']  ?>
-                        </th>
-                        <th scope="col" width="80px"><img src="../../fotos/<? echo $row_idioma['fotobandera']  ?>" width="10" height="5"> 
+                        <th scope="col" width="100px"><a href="empresa_show.php?id=<? echo $row_empresa['idEmpresas']  ?>"><? echo $row_empresa['nombre']  ?></a>
                         </th>
                         <th scope="col"><div class="button" id="show">
-            				<a href="idioma_mod.php?id=<? echo $row_idioma['idIdiomas']  ?>">Editar</a>
+            				<a href="empresa_mod.php?id=<? echo $row_empresa['idEmpresas']  ?>">Editar</a>
        						</div>
                         </th>
                     </tr>
-                    <? }while($row_idioma = mysql_fetch_assoc($idioma)); }  ?>
+                    <? }while($row_empresa = mysql_fetch_assoc($empresa)); }else{  ?>
+                    
+                    <h2> No Se Han Encontrado Registros </h2>
+                    <div class="button" id="show">
+            				<a href="empresa_add.php">Agregar Nuevo</a>
+       						</div>
+                    <?    }?>
 
                 </table>
         </div>

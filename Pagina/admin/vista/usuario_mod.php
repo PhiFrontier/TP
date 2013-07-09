@@ -1,5 +1,7 @@
 <?php require_once('../../Connections/proyecto.php'); ?>
 <?php
+$id=$_GET["id"];
+
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -32,12 +34,12 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_idioma = "SELECT * FROM idiomas";
+$query_usuario = "SELECT * FROM usuarios where idUsuarios = $id";
 mysql_query("SET NAMES 'utf8'");
-$idioma = mysql_query($query_idioma, $proyecto) or die(mysql_error());
-$row_idioma = mysql_fetch_assoc($idioma);
-$totalRows_idioma = mysql_num_rows($idioma);
-
+$usuario = mysql_query($query_usuario, $proyecto) or die(mysql_error());
+$row_usuario = mysql_fetch_assoc($usuario);
+$totalRows_usuario = mysql_num_rows($usuario);
+if($totalRows_usuario==0){ header("location:error_no.html");}
 
 ?>
 <!DOCTYPE HTML>
@@ -45,7 +47,7 @@ $totalRows_idioma = mysql_num_rows($idioma);
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ingresar</title>
+    <title>Sistema de Administracion</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet">
 	<script src="../../jquery/jquery-latest.js" type="text/javascript"></script>
 </head>
@@ -78,49 +80,41 @@ $totalRows_idioma = mysql_num_rows($idioma);
               <li></li>
             </ul>
       </div>
-          <h1>Mantenedor Idiomas</h1> 
+        <blockquote>
+          <h1>Agregar Usuario</h1> 
+        </blockquote>
     </div>
     <div class="content">
         
-        <div class="post"><form action="" method="post">
-        <input type="text" name="buscar"><input type="submit" value="Buscar">
-        </form>
-        </div>
-        <div class="post-item">
-        		<table class="grid" border="0">
-                	<tr>
-                    	<th scope="col" width="40px">Nro
-                        </th>
-                        <th scope="col" width="100px">Nombre
-                        </th>
-                        <th scope="col" width="80px">Bandera
-                        </th>
-                        <th scope="col">Modificar
-                        </th>
-                      <td><div class="button" id="show">
-            				<a href="idioma_add.php">Agregar Nuevo</a>
-       						</div>
-                        </td>
+        <div class="post">
+          <form action="../controlador/usuario_mod.php" method="post">
+          	<div class="post-item">
+            	<table>
+                <tr>
+                    	<td>ID:</td> 
+                        <td><input name="id" type="text" readonly="readonly" value="<? echo $row_usuario['idUsuarios'] ?>"></td>
+                  </tr>
+            		<tr>
+                    	<td>Nombre Usuario:</td> 
+                        <td><input type="text" name="usuario" value="<? echo $row_usuario['nom_usuario'] ?>"></td>
                     </tr>
-                    <?php if($totalRows_idioma>0){
-							do{
-								?>
-                    
+            		<tr>
+                    	<td>Password:</td>
+                        <td><input type="password" name="pass" value="<? echo $row_usuario['password'] ?>"></td>
+                    </tr>
                     <tr>
-                    	<th scope="col" width="40px"><? echo $row_idioma['idIdiomas']  ?>
-                        </th>
-                        <th scope="col" width="100px"><? echo $row_idioma['nombre']  ?>
-                        </th>
-                        <th scope="col" width="80px"><img src="../../fotos/<? echo $row_idioma['fotobandera']  ?>" width="10" height="5"> 
-                        </th>
-                        <th scope="col"><div class="button" id="show">
-            				<a href="idioma_mod.php?id=<? echo $row_idioma['idIdiomas']  ?>">Editar</a>
-       						</div>
-                        </th>
+                    	<td>Ingresar Nueva Password:</td>
+                        <td><input type="password" name="pass1"></td>
                     </tr>
-                    <? }while($row_idioma = mysql_fetch_assoc($idioma)); }  ?>
-
-                </table>
+            		<tr>
+                    	<td>Vuelva a Ingresar Nueva Password:</td>
+                        <td><input type="password" name="pass2"></td>
+                    </tr>
+            	</table>
+            </div>
+                <input type="submit" value="Guardar">
+                <input type="reset" value="Borrar">
+          </form>
         </div>
     </div>
     <div class="footer">

@@ -5,7 +5,7 @@ require_once('../Connections/proyecto.php');
 $idmon=$_GET["mon"];
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_region = "SELECT * FROM region";
+$query_region = "SELECT * FROM monumentos";
 mysql_query("SET NAMES 'utf8'");
 $region = mysql_query($query_region, $proyecto) or die(mysql_error());
 $row_region = mysql_fetch_assoc($region);

@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ingresar</title>
+    <title>Sistema de Administracion</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet">
 	<script src="../../jquery/jquery-latest.js" type="text/javascript"></script>
 </head>
@@ -38,15 +38,29 @@
             </ul>
       </div>
         <blockquote>
-          <h1>Agregar Idioma</h1> 
+          <h1>Agregar Usuario</h1> 
         </blockquote>
     </div>
     <div class="content">
         
         <div class="post">
-          <form action="../controlador/idioma_add.php" enctype="multipart/form-data" method="post">
-          		<div class="post-item">Nombre: <input type="text" name="idioma" id="idioma"></div>
-              	<div class="post-item" >Imagen: <input type="file" name="foto" id="foto"></div>
+          <form action="../controlador/usuario_add.php" method="post">
+          	<div class="post-item">
+            	<table>
+            		<tr>
+                    	<td>Nombre Usuario:</td> 
+                        <td><input type="text" name="usuario"></td>
+                    </tr>
+            		<tr>
+                    	<td>Password:</td>
+                        <td><input type="password" name="pass1"></td>
+                    </tr>
+            		<tr>
+                    	<td>Vuelva a Ingresar Password:</td>
+                        <td><input type="password" name="pass2"></td>
+                    </tr>
+            	</table>
+            </div>
                 <input type="submit" value="Guardar">
                 <input type="reset" value="Borrar">
           </form>

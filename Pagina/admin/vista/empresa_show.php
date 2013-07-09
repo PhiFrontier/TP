@@ -30,13 +30,28 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   return $theValue;
 }
 }
+//$id=$_GET["id"];
+$id=2;
+mysql_select_db($database_proyecto, $proyecto);
+$query_empresa = "SELECT * FROM empresas where idEmpresas = $id";
+mysql_query("SET NAMES 'utf8'");
+$empresa = mysql_query($query_empresa, $proyecto) or die(mysql_error());
+$row_empresa = mysql_fetch_assoc($empresa);
+$totalRows_empresa = mysql_num_rows($empresa);
 
 mysql_select_db($database_proyecto, $proyecto);
-$query_idioma = "SELECT * FROM idiomas";
+$query_direccion = "SELECT * FROM direcciones where idEmpresas = $id";
 mysql_query("SET NAMES 'utf8'");
-$idioma = mysql_query($query_idioma, $proyecto) or die(mysql_error());
-$row_idioma = mysql_fetch_assoc($idioma);
-$totalRows_idioma = mysql_num_rows($idioma);
+$direccion = mysql_query($query_direccion, $proyecto) or die(mysql_error());
+$row_direccion = mysql_fetch_assoc($direccion);
+$totalRows_direccion = mysql_num_rows($direccion);
+
+mysql_select_db($database_proyecto, $proyecto);
+$query_comuna = "SELECT * FROM comuna";
+mysql_query("SET NAMES 'utf8'");
+$comuna = mysql_query($query_comuna, $proyecto) or die(mysql_error());
+$row_comuna = mysql_fetch_assoc($comuna);
+$totalRows_comuna = mysql_num_rows($comuna);
 
 
 ?>
@@ -45,7 +60,7 @@ $totalRows_idioma = mysql_num_rows($idioma);
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ingresar</title>
+    <title>Mantenedor Empresas</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet">
 	<script src="../../jquery/jquery-latest.js" type="text/javascript"></script>
 </head>
@@ -78,7 +93,7 @@ $totalRows_idioma = mysql_num_rows($idioma);
               <li></li>
             </ul>
       </div>
-          <h1>Mantenedor Idiomas</h1> 
+          <h1><? echo $row_direccion[0]["razon_social"]  ?></h1> 
     </div>
     <div class="content">
         
@@ -86,41 +101,73 @@ $totalRows_idioma = mysql_num_rows($idioma);
         <input type="text" name="buscar"><input type="submit" value="Buscar">
         </form>
         </div>
+        
         <div class="post-item">
+		<h3>Direcciones</h3>
+		<? if($totalRows_empresa>0){ ?>
         		<table class="grid" border="0">
                 	<tr>
                     	<th scope="col" width="40px">Nro
                         </th>
-                        <th scope="col" width="100px">Nombre
+                        <th scope="col" width="100px">Direccion
                         </th>
-                        <th scope="col" width="80px">Bandera
+                        <th scope="col">Comuna
+                        </th>                        
+                        <th scope="col">Encargado
                         </th>
                         <th scope="col">Modificar
                         </th>
                       <td><div class="button" id="show">
-            				<a href="idioma_add.php">Agregar Nuevo</a>
+            				<a href="empresa_add.php">Agregar Nuevo</a>
        						</div>
                         </td>
                     </tr>
-                    <?php if($totalRows_idioma>0){
+                    <?php 
 							do{
 								?>
                     
                     <tr>
-                    	<th scope="col" width="40px"><? echo $row_idioma['idIdiomas']  ?>
+                    	<th scope="col" width="40px"><? echo $row_direccion['idDirecciones']  ?>
                         </th>
-                        <th scope="col" width="100px"><? echo $row_idioma['nombre']  ?>
+                        <th scope="col" width="100px"><? echo $row_direccion['calle']  ?> <? echo $row_direccion['numero']  ?>
+                         </th>
+                         <th scope="col" width="40px"><? 
+						 do{
+							 if($row_comuna['COMUNA_ID']==$row_direccion['idComunas']){
+								 echo $row_comuna['COMUNA_NOMBRE'];
+								 
+							 }
+							 } while ($row_comuna = mysql_fetch_assoc($comuna));
+  $rows = mysql_num_rows($comuna);
+  if($rows > 0) {
+      mysql_data_seek($comuna, 0);
+	  $row_comuna = mysql_fetch_assoc($comuna);
+  }
+						  ?>
                         </th>
-                        <th scope="col" width="80px"><img src="../../fotos/<? echo $row_idioma['fotobandera']  ?>" width="10" height="5"> 
+                     
+                        
+                        <th scope="col" width="40px">
+                        Por Implementar
                         </th>
+                                   
+                        
+                        
                         <th scope="col"><div class="button" id="show">
-            				<a href="idioma_mod.php?id=<? echo $row_idioma['idIdiomas']  ?>">Editar</a>
+            				<a href="direccion_mod.php?id=<? echo $row_direccion['idDirecciones']  ?>">Editar</a>
        						</div>
                         </th>
                     </tr>
-                    <? }while($row_idioma = mysql_fetch_assoc($idioma)); }  ?>
+                    <? }while($row_empresa = mysql_fetch_assoc($empresa)); }else{  ?>
+                    
+                    <h2> No Se Han Encontrado Registros </h2>
+                    <div class="button" id="show">
+            				<a href="empresa_add.php">Agregar Nuevo</a>
+       						</div>
+                    
 
                 </table>
+                <?    }?>
         </div>
     </div>
     <div class="footer">

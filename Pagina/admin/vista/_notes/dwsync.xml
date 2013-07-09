@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="usuarios.php" server="C:/xampp/htdocs/" local="130169576430255125" remote="130169576430000000" Dst="1" />
-<file name="usuarios.php" server="C:/xampp/htdocs/proyecto/" local="130171120082418120" remote="130171120080000000" Dst="1" />
 <file name="in.php" server="C:/xampp/htdocs/proyecto/" local="130176274455038101" remote="130176274450000000" Dst="1" />
 <file name="monumentos.php" server="C:/xampp/htdocs/proyecto/" local="130176364848326749" remote="130176364840000000" Dst="1" />
 <file name="Administrador_enMonumento.php" server="C:/xampp/htdocs/proyecto/" local="130171120082268024" remote="130171120080000000" Dst="1" />
@@ -9,9 +8,17 @@
 <file name="error_no.html" server="C:/xampp/htdocs/proyecto/" local="130176276357836847" remote="130176276350000000" Dst="1" />
 <file name="agregar_empresas.php" server="C:/xampp/htdocs/proyecto/" local="130172308317642732" remote="130172308310000000" Dst="1" />
 <file name="empresas.html" server="C:/xampp/htdocs/proyecto/" local="130172311986344808" remote="130172311980000000" Dst="1" />
-<file name="idioma_add.php" server="C:/xampp/htdocs/proyecto/" local="130176275486193684" remote="130176275480000000" Dst="1" />
+<file name="idioma_add.php" server="C:/xampp/htdocs/proyecto/" local="130177925214933186" remote="130177925210000000" Dst="1" />
 <file name="Monumento_add.php" server="C:/xampp/htdocs/proyecto/" local="130172014365397762" remote="130172014360000000" Dst="1" />
-<file name="idiomas.php" server="C:/xampp/htdocs/proyecto/" local="130176368064527591" remote="130176368060000000" Dst="1" />
+<file name="idiomas.php" server="C:/xampp/htdocs/proyecto/" local="130177920158895852" remote="130177920150000000" Dst="1" />
 <file name="idioma_mod.php" server="C:/xampp/htdocs/proyecto/" local="130176372733220797" remote="130176372730000000" Dst="1" />
 <file name="error_const.php" server="C:/xampp/htdocs/proyecto/" local="130176293762217732" remote="130176293760000000" Dst="1" />
+<file name="empresas.php" server="C:/xampp/htdocs/proyecto/" local="130177226592593418" remote="130177226590000000" Dst="1" />
+<file name="empresa_show.php" server="C:/xampp/htdocs/proyecto/" local="130177916099518893" remote="130177916090000000" Dst="1" />
+<file name="usuario_add.php" server="C:/xampp/htdocs/proyecto/" local="130177931448549821" remote="130177931440000000" Dst="1" />
+<file name="empresa_add.php" server="C:/xampp/htdocs/proyecto/" local="130177158482257563" remote="130177158480000000" Dst="1" />
+<file name="Monumento_mod.php" server="C:/xampp/htdocs/proyecto/" local="130176404322310099" remote="130176404320000000" Dst="1" />
+<file name="persona_add.php" server="C:/xampp/htdocs/proyecto/" local="130171120082418120" remote="130171120080000000" Dst="1" />
+<file name="usuarios.php" server="C:/xampp/htdocs/proyecto/" local="130177941741721436" remote="130177941740000000" Dst="1" />
+<file name="usuario_mod.php" server="C:/xampp/htdocs/proyecto/" local="130178349441605855" remote="130178349440000000" Dst="1" />
 </dwsync>
