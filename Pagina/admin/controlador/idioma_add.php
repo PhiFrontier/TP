@@ -8,6 +8,11 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
 $name = $_FILES['foto']['name'];
 $size = $_FILES['foto']['size'];
 $nombre = $_POST['idioma'];
+
+$fecha=date("d/n/Y");
+$estado = 1;
+$usuario = 1;
+
 if(strlen($name))
 {
 list($txt, $ext) = explode(".", $name);
@@ -23,7 +28,7 @@ if(move_uploaded_file($tmp, $path.$actual_image_name))
 		mysql_connect("localhost","root",""); 
 		mysql_select_db("proyecto");
                         // echo "insert into idiomas (nombre, fotobandera) values ('$nombre','$actual_image_name')";
-        $query="insert into idiomas (nombre, fotobandera) values ('$nombre','$actual_image_name')";  
+        $query="insert into idiomas (nombre, fotobandera, estado, fecha, idUsuarios) values ('$nombre','$actual_image_name', '$estado', '$fecha', '$usuario')";  
 
         $result=mysql_query($query); 
 	//	echo "<img src='../../fotos/".$actual_image_name."'>";

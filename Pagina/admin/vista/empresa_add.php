@@ -68,7 +68,7 @@ $totalRows_Comuna = mysql_num_rows($Comuna);
 <div id="wrap">
     <div class="header">
         <div class="logo">
-            <a href="../index.php"><img src="../images/logo.png" alt="Playlist Mobi" /></a>        </div>
+            <a href="../index.php"><img src="../images/logo.png" alt="" /></a>        </div>
         <div class="button" id="show">
             <a href="#">Menu</a>        </div>
         <div class="clear-float"></div>
@@ -96,7 +96,7 @@ $totalRows_Comuna = mysql_num_rows($Comuna);
           <h1>Agregar Empresa</h1> 
         </blockquote>
     </div>
-    <form action="" enctype="multipart/form-data" method="post">
+    <form action="../controlador/empresa_add.php"  method="post">
    	<div class="content">
 				<legend>Datos</legend>
 				<div class="post-item">
