@@ -123,39 +123,12 @@ $totalRows_comuna = mysql_num_rows($comuna);
 
 				<div class="post-item">
 <p>Foto Monumento</p>
-						<table border="1" height="100px" width="100px;" class="post-image">
-							<tr>
-								<td>Vista Previa</td>
-							</tr>
-						</table>
 						<br />
 						<p>Archivo: 
 						  <input type="file" name="foto_monumento" id="foto_monumento"></div>
 				
                 
                 <div class="post-item">
-<p>Foto QR</p>
-						<table border="1" height="100px" width="100px;" class="post-image">
-							<tr>
-								<td>Vista Previa</td>
-							</tr>
-						</table>
-						<br />
-						<p>Archivo: <INPUT type="file" name="foto_qr" id="foto_qr"></p>
-				</div>
-                    
-                 <div class="post-item">
-<p>Foto Mapa</p>
-						<table border="1" height="100px" width="100px;" class="post-image">
-							<tr>
-								<td>Vista Previa</td>
-							</tr>
-						</table>
-						<br />
-						<p>Archivo: <INPUT type="file" name="foto_mapa" id="foto_mapa"></p>
-				</div>
-
-				<div class="post-item">
 							Texto:<br />
  							<textarea cols="90" rows="6" name="texto"  id="texto" draggable="false" >
 							</textarea>
