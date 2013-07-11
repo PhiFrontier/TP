@@ -97,7 +97,7 @@ $totalRows_tipo = mysql_num_rows($tipo);
                         <th scope="col">Modificar
                         </th>
                       <td><div class="button" id="show">
-            				<a href="usuario_add.php">Agregar Nuevo</a>
+            				<a href="tipo_add.php">Agregar Nuevo</a>
        						</div>
                         </td>
                     </tr>

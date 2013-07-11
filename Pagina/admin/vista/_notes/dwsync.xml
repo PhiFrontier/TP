@@ -14,14 +14,15 @@
 <file name="idioma_mod.php" server="C:/xampp/htdocs/proyecto/" local="130176372733220797" remote="130176372730000000" Dst="1" />
 <file name="error_const.php" server="C:/xampp/htdocs/proyecto/" local="130176293762217732" remote="130176293760000000" Dst="1" />
 <file name="empresas.php" server="C:/xampp/htdocs/proyecto/" local="130177226592593418" remote="130177226590000000" Dst="1" />
-<file name="empresa_show.php" server="C:/xampp/htdocs/proyecto/" local="130177916099518893" remote="130177916090000000" Dst="1" />
+<file name="empresa_show.php" server="C:/xampp/htdocs/proyecto/" local="130178750729500156" remote="130178750720000000" Dst="1" />
 <file name="usuario_add.php" server="C:/xampp/htdocs/proyecto/" local="130177931448549821" remote="130177931440000000" Dst="1" />
 <file name="empresa_add.php" server="C:/xampp/htdocs/proyecto/" local="130177158482257563" remote="130177158480000000" Dst="1" />
 <file name="Monumento_mod.php" server="C:/xampp/htdocs/proyecto/" local="130176404322310099" remote="130176404320000000" Dst="1" />
 <file name="persona_add.php" server="C:/xampp/htdocs/proyecto/" local="130171120082418120" remote="130171120080000000" Dst="1" />
 <file name="usuarios.php" server="C:/xampp/htdocs/proyecto/" local="130177941741721436" remote="130177941740000000" Dst="1" />
 <file name="usuario_mod.php" server="C:/xampp/htdocs/proyecto/" local="130178728441686993" remote="130178728440000000" Dst="1" />
-<file name="tiposUser.php" server="C:/xampp/htdocs/proyecto/" local="130178719754117390" remote="130178719750000000" Dst="1" />
+<file name="tiposUser.php" server="C:/xampp/htdocs/proyecto/" local="130178784561500056" remote="130178784560000000" Dst="1" />
 <file name="tipo_add.php" server="C:/xampp/htdocs/proyecto/" local="130178722985052047" remote="130178722980000000" Dst="1" />
 <file name="tipo_mod.php" server="C:/xampp/htdocs/proyecto/" local="130178736366810751" remote="130178736360000000" Dst="1" />
+<file name="pais.php" server="C:/xampp/htdocs/proyecto/" local="130179708894551312" remote="130179708890000000" Dst="1" />
 </dwsync>
