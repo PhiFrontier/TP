@@ -76,12 +76,12 @@ $totalRows_comuna = mysql_num_rows($comuna);
             <ul>
                 <li><a href="in.php">Inicio</a></li>
                 <li><a href="monumentos.php">Adminitrador Monumento </a></li>
-                <li><a href="#">Adminitrador Empresas </a></li>
-                <li><a href="#">Adminitrador Idiomas y tipos de usuarios </a></li>
-                <li><a href="#">Adminitrador textos</a></li>
-                <li><a href="#">Adminitrador usuarios </a></li>
-                <li><a href="#">Adminitrador región-comuna-provicia</a></li>
-           </ul>
+                <li><a href="empresas.php">Adminitrador Empresas</a></li>
+                <li><a href="idiomas.php">Adminitrador Idiomas</a></li>
+                <li><a href="tiposUser.php">Adminitrador Tipos de Usuarios </a></li>
+                <li><a href="usuarios.php">Adminitrador usuarios </a></li>
+                <li><a href="pais.php">Adminitrador región-comuna-provicia</a></li>
+                <li>
                   <ul>
                     <li><a href="../index.php">&quot;administrador&quot; cerrar </a></li>
                   </ul>
@@ -98,13 +98,13 @@ $totalRows_comuna = mysql_num_rows($comuna);
     </div>
     <div class="content">
         <div class="post">
-            <h1>Edicion de Monumentos</h1>
+            <h1>Agregar Monumento</h1>
             <div class="post-item">
-           	  <form action="#" method="post" enctype="multipart/form-data">
+           	  <form action="../controlador/monumento_add.php" enctype="multipart/form-data" method="post">
 				<div class="post-item">
 						Titulo: <input type="text" name="titulo" id="titulo"  width="200px"/>
 
-					</div>
+				</div>
 
 				<div class="post-item">
 							Seleccione Idioma:
@@ -113,13 +113,13 @@ $totalRows_comuna = mysql_num_rows($comuna);
 							<table>
 								<tr>
 									<td>Español</td> 
-									<td><input type="radio" name="idioma" id="espanol" checked="checked"/></td>
+									<td><input type="radio" name="idioma" id="2" checked="checked"/></td>
 								
-									<td>Ingles</td> <td><input type="radio" name="idioma" id="ingles" /></td>
-									<td>Chino</td> <td><input type="radio" name="idioma" id="chino" /></td>
+									<td>Ingles</td> <td><input type="radio" name="idioma" id="1" /></td>
+									<td>Chino</td> <td><input type="radio" name="idioma" id="3" /></td>
 								</tr>
 							</table>
-					</div>
+				</div>
 
 				<div class="post-item">
 <p>Foto Monumento</p>
@@ -129,8 +129,9 @@ $totalRows_comuna = mysql_num_rows($comuna);
 							</tr>
 						</table>
 						<br />
-						<p>Archivo: <INPUT type="file" name="Fmon" size="20"></p>
-					</div>
+						<p>Archivo: 
+						  <input type="file" name="foto_monumento" id="foto_monumento"></div>
+				
                 
                 <div class="post-item">
 <p>Foto QR</p>
@@ -140,8 +141,8 @@ $totalRows_comuna = mysql_num_rows($comuna);
 							</tr>
 						</table>
 						<br />
-						<p>Archivo: <INPUT type="file" name="Fqr" size="20"></p>
-					</div>
+						<p>Archivo: <INPUT type="file" name="foto_qr" id="foto_qr"></p>
+				</div>
                     
                  <div class="post-item">
 <p>Foto Mapa</p>
@@ -151,14 +152,14 @@ $totalRows_comuna = mysql_num_rows($comuna);
 							</tr>
 						</table>
 						<br />
-						<p>Archivo: <INPUT type="file" name="Fmap" size="20"></p>
-					</div>
+						<p>Archivo: <INPUT type="file" name="foto_mapa" id="foto_mapa"></p>
+				</div>
 
 				<div class="post-item">
 							Texto:<br />
- 							<textarea cols="90" rows="6" name="textos"  draggable="false" >
+ 							<textarea cols="90" rows="6" name="texto"  id="texto" draggable="false" >
 							</textarea>
-					</div>
+				</div>
 
 				<div class="post-item">
 						Direccion:
@@ -166,18 +167,18 @@ $totalRows_comuna = mysql_num_rows($comuna);
 						<table>
 							<tr>
 								<td>Calle</td>
-								<td><input type="text" name="calle" /></td>
+								<td><input type="text" name="calle" id="calle"/></td>
 								<td width="100px"></td>
 								<td>Numero</td>
-								<td><input type="text" name="numero" /></td>
+								<td><input type="text" name="numero" id="numero"/></td>
 							</tr>
 
 							<tr>
 								<td>Poblacion</td>
-								<td><input type="text" name="poblacion" /></td>
+								<td><input type="text" name="poblacion" id="poblacion"/></td>
                                 <td width="100px"></td>
                                 <td>Referencia</td>
-                                <td><input type="text" name="ref" /></td>
+                                <td><input type="text" name="referencia" id="referencia"/></td>
                             </tr>
                             
                             <tr>
@@ -240,7 +241,7 @@ do {
                         <input type="reset" value="Borrar" />
 
 
-                    </div>
+                </div>
 
               </form>
             	
